@@ -4,6 +4,7 @@ const cookieParser = require("cookie-parser");
 
 const mongoose = require("mongoose");
 const authRouter = require("./routers/authRouter.js");
+const feedbackRouter = require("./routers/feedbackRouter.js");
 
 const PORT = 5000;
 const DB_URL =
@@ -15,6 +16,7 @@ app.use(cookieParser());
 app.use(cors());
 
 app.use("/api/auth", authRouter);
+app.use("/api/feedbacks", feedbackRouter);
 
 const start = async () => {
 	try {
