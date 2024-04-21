@@ -4,6 +4,7 @@ import Layout from "./pages/Layout/Layout";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
+import Profile from "./pages/Profile/Profile";
 import Users from "./pages/Users/Users";
 
 function App() {
@@ -30,6 +31,10 @@ function App() {
 				<Route
 					path='users'
 					element={<Users />}
+				></Route>
+				<Route
+					path='users/:username'
+					element={<Profile />}
 				></Route>
 			</Route>
 		</Routes>
