@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useLoginMutation } from "../../api/auth";
 
 const LoginForm = () => {
-      const [login, response] = useLoginMutation();
+	const [login, response] = useLoginMutation();
 
 	const navigate = useNavigate();
 	useEffect(() => {
@@ -15,7 +15,7 @@ const LoginForm = () => {
 		}
 	}, [response.isSuccess]);
 
-      const [username, setUsername] = useState("");
+	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
 	const [error, setError] = useState("");
 
@@ -27,7 +27,7 @@ const LoginForm = () => {
 		setPassword(evt.target.value);
 	};
 
-      const formSubmitHandler = async evt => {
+	const formSubmitHandler = async evt => {
 		evt.preventDefault();
 		if (password.trim().length > 3 && username.trim().length > 1) {
 			setError("");
@@ -41,8 +41,8 @@ const LoginForm = () => {
 			setError("Пользователя с такими данным не существует");
 		}
 	};
-      
-      return (
+
+	return (
 		<form
 			className={styles.loginForm}
 			onSubmit={formSubmitHandler}

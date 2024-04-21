@@ -4,7 +4,7 @@ import { useRegisterMutation } from "../../api/auth";
 import { useNavigate } from "react-router-dom";
 
 const RegisterForm = () => {
-      const [register, response] = useRegisterMutation();
+	const [register, response] = useRegisterMutation();
 
 	const navigate = useNavigate();
 	useEffect(() => {
@@ -83,84 +83,84 @@ const RegisterForm = () => {
 			console.log(e);
 		}
 	};
-      
+
 	const usernameClasses = usernameError
-            ? `${styles.registerForm__input} ${styles.registerForm__inputError}`
-            : `${styles.registerForm__input}`;
-      const emailClasses = emailError
-            ? `${styles.registerForm__input} ${styles.registerForm__inputError}`
-            : `${styles.registerForm__input}`;
-      const passwordClasses = passwordError
-            ? `${styles.registerForm__input} ${styles.registerForm__inputError}`
-            : `${styles.registerForm__input}`;
-      const passwordRepeatClasses = passwordRepeatError
-            ? `${styles.registerForm__input} ${styles.registerForm__inputError}`
-            : `${styles.registerForm__input}`;
+		? `${styles.registerForm__input} ${styles.registerForm__inputError}`
+		: `${styles.registerForm__input}`;
+	const emailClasses = emailError
+		? `${styles.registerForm__input} ${styles.registerForm__inputError}`
+		: `${styles.registerForm__input}`;
+	const passwordClasses = passwordError
+		? `${styles.registerForm__input} ${styles.registerForm__inputError}`
+		: `${styles.registerForm__input}`;
+	const passwordRepeatClasses = passwordRepeatError
+		? `${styles.registerForm__input} ${styles.registerForm__inputError}`
+		: `${styles.registerForm__input}`;
 
-      return (
-            <form
-                  className={styles.registerForm}
-                  onSubmit={formSubmitHandler}
-                  method='post'
-            >
-                  {usernameError && <p className={styles.registerForm__failure}>{usernameError}</p>}
-                  <input
-                        type='text'
-                        name='username'
-                        placeholder='Введите логин'
-                        value={username}
-                        onChange={usernameChangeHandler}
-                        onBlur={usernameBlurHandler}
-                        className={usernameClasses}
-                  />
-                  {emailError && <p className={styles.registerForm__failure}>{emailError}</p>}
-                  <input
-                        type='text'
-                        name='email'
-                        placeholder='Введите e-mail'
-                        value={email}
-                        onChange={emailChangeHandler}
-                        onBlur={emailBlurHandler}
-                        className={emailClasses}
-                  />
-                  {passwordError && <p className={styles.registerForm__failure}>{passwordError}</p>}
-                  <input
-                        type='password'
-                        name='password'
-                        placeholder='Введите пароль'
-                        value={password}
-                        onChange={passwordChangeHandler}
-                        onBlur={passwordBlurHandler}
-                        className={passwordClasses}
-                  />
-                  {passwordRepeatError && (
-                        <p className={styles.registerForm__failure}>{passwordRepeatError}</p>
-                  )}
-                  <input
-                        type='password'
-                        name='password-repeat'
-                        placeholder='Повторите пароль'
-                        value={passwordRepeat}
-                        onChange={passwordRepeatChangeHandler}
-                        onBlur={passwordRepeatBlurHandler}
-                        className={passwordRepeatClasses}
-                  />
+	return (
+		<form
+			className={styles.registerForm}
+			onSubmit={formSubmitHandler}
+			method='post'
+		>
+			{usernameError && <p className={styles.registerForm__failure}>{usernameError}</p>}
+			<input
+				type='text'
+				name='username'
+				placeholder='Введите логин'
+				value={username}
+				onChange={usernameChangeHandler}
+				onBlur={usernameBlurHandler}
+				className={usernameClasses}
+			/>
+			{emailError && <p className={styles.registerForm__failure}>{emailError}</p>}
+			<input
+				type='text'
+				name='email'
+				placeholder='Введите e-mail'
+				value={email}
+				onChange={emailChangeHandler}
+				onBlur={emailBlurHandler}
+				className={emailClasses}
+			/>
+			{passwordError && <p className={styles.registerForm__failure}>{passwordError}</p>}
+			<input
+				type='password'
+				name='password'
+				placeholder='Введите пароль'
+				value={password}
+				onChange={passwordChangeHandler}
+				onBlur={passwordBlurHandler}
+				className={passwordClasses}
+			/>
+			{passwordRepeatError && (
+				<p className={styles.registerForm__failure}>{passwordRepeatError}</p>
+			)}
+			<input
+				type='password'
+				name='password-repeat'
+				placeholder='Повторите пароль'
+				value={passwordRepeat}
+				onChange={passwordRepeatChangeHandler}
+				onBlur={passwordRepeatBlurHandler}
+				className={passwordRepeatClasses}
+			/>
 
-                  {response.isError && (
-                        <p className={styles.registerForm__failure}>{response.error.data.message}</p>
-                  )}
-                  {response.isSuccess && (
-                        <p className={styles.registerForm__success}>Регистрация успешна</p>
-                  )}
-                  <button
-                        type='submit'
-                        className='btn-primary'
-                        disabled={isDisabled}
-                  >
-                        Регистрация
-                  </button>
-            </form>
-      );
+			{response.isError && (
+				<p className={styles.registerForm__failure}>{response.error.data.message}</p>
+			)}
+			{response.isSuccess && (
+				<p className={styles.registerForm__success}>Регистрация успешна</p>
+			)}
+			<button
+				type='submit'
+				className='btn-primary'
+				disabled={isDisabled}
+			>
+				Регистрация
+			</button>
+		</form>
+	);
 };
 
 export default RegisterForm;

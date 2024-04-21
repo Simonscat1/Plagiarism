@@ -1,0 +1,52 @@
+.checkForm {
+	max-width: 700px;
+	margin: 0 auto;
+	margin-top: 60px;
+	display: flex;
+	flex-direction: column;
+	&__results {
+		margin-top: 80px;
+		font-size: 18px;
+	}
+	&__failure {
+		color: var(--error-color);
+		margin-bottom: 15px;
+	}
+	&__success {
+		color: var(--success-color);
+		margin-bottom: 15px;
+	}
+	button {
+		outline: none;
+		border: none;
+		margin-bottom: 10px;
+	}
+
+	.btnSend {
+		display: block;
+		margin: 0 auto;
+		width: 50%;
+		background-color: #1f70da;
+		color: #fff;
+		font-size: 20px;
+		font-weight: 700;
+		&:hover {
+			background-color: #065fd2;
+		}
+	}
+	textarea {
+		padding: 10px 50px 10px 25px;
+		border: 1px solid transparent;
+		outline: 0;
+		background-color: #062755;
+		color: #fff;
+		margin-bottom: 20px;
+		font-family: inherit;
+		&::placeholder {
+			color: #ccc;
+		}
+		&:focus {
+			border-color: #1051b3;
+		}
+	}
+}

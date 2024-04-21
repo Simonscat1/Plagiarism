@@ -1,0 +1,51 @@
+.checkResults {
+	&__title {
+		text-align: center;
+		font-size: 32px;
+	}
+	&__group {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 50px;
+	}
+	&__results {
+		width: 45%;
+		margin-bottom: 60px;
+	}
+}
+
+.results {
+	&__title {
+		font-size: 20px;
+	}
+	&__percent {
+		position: relative;
+		margin-top: 15px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 25px;
+		background-color: white;
+		color: #000;
+		&Title {
+			z-index: 100;
+			font-weight: 700;
+		}
+	}
+	&__scale {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		z-index: 10;
+		&_low {
+			background-color: rgb(203, 34, 5);
+		}
+		&_middle {
+			background-color: orange;
+		}
+		&_high {
+			background-color: green;
+		}
+	}
+}

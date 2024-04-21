@@ -1,0 +1,14 @@
+select {
+	padding: 10px 50px 10px 20px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	outline: 0;
+	background-color: #062755;
+	color: #fff;
+	&:focus {
+		border-color: #1051b3;
+	}
+}
+option {
+	padding: 10px 50px 10px 25px;
+}
