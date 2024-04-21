@@ -1,0 +1,62 @@
+.content {
+	margin-top: 40px;
+	display: flex;
+	gap: 100px;
+	&__info {
+		margin-top: 50px;
+	}
+	&__title {
+		font-weight: 800;
+		font-size: 32px;
+		color: #fff;
+		text-transform: uppercase;
+	}
+	&__subtitle {
+		margin-top: 10px;
+		font-weight: 700;
+		font-size: 24px;
+		color: #3d88eb;
+	}
+	&__descr {
+		margin-top: 30px;
+		font-size: 18px;
+		line-height: 1.5;
+	}
+	&__controls {
+		margin-top: 60px;
+		display: flex;
+		gap: 25px;
+	}
+	&__btnPrimary {
+		padding: 10px 40px;
+		display: block;
+		background-color: #1f70da;
+		color: #fff;
+		font-size: 20px;
+		text-decoration: none;
+		font-weight: 700;
+		transition: 0.25s all;
+		&:hover {
+			background-color: #065fd2;
+		}
+	}
+	&__btnSecondary {
+		padding: 10px 40px;
+		display: block;
+		background-color: white;
+		color: #000;
+		font-size: 20px;
+		text-decoration: none;
+		font-weight: 700;
+		transition: 0.25s all;
+		&:hover {
+			background-color: #d9d8d8;
+		}
+	}
+}
+
+.mainImg {
+	align-self: center;
+	width: 85%;
+	height: 85%;
+}
