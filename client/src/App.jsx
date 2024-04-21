@@ -3,6 +3,8 @@ import { useSelector } from "react-redux";
 import Layout from "./pages/Layout/Layout";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
+import Register from "./pages/Register/Register";
+import Users from "./pages/Users/Users";
 
 function App() {
 	const isLogged = useSelector(state => state.authSlice.isLogged);
@@ -21,6 +23,14 @@ function App() {
 					element={!isLogged ? <Login /> : <Navigate to='/' />}
 					path='login'
 				/>
+				<Route
+					element={!isLogged ? <Register /> : <Navigate to='/' />}
+					path='register'
+				/>
+				<Route
+					path='users'
+					element={<Users />}
+				></Route>
 			</Route>
 		</Routes>
 	);
